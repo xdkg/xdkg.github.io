@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook của tôi</title>
+
+    <link rel="stylesheet" href="dflip/css/dflip.min.css">
+    
+    <link rel="stylesheet" href="dflip/css/themify-icons.min.css">
+
+    <style>
+        /* CSS để flipbook hiển thị toàn màn hình */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Ẩn thanh cuộn của trình duyệt */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="_df_book" 
+         source="2025.10.28flipbook.pdf" 
+         id="df_manual_book">
+    </div>
+
+
+    <script src="dflip/js/libs/jquery.min.js"></script>
+    <script src="dflip/js/dflip.min.js"></script>
+
+    <script>
+        // 5. Khởi tạo Flipbook khi trang tải xong
+        $(document).ready(function () {
+            // Tùy chọn cơ bản cho flipbook
+            var options = {
+                height: "100vh", // Cao 100% màn hình
+                duration: 800     // Tốc độ lật trang (miligiây)
+            };
+
+            // Lệnh để chạy flipbook
+            $('#df_manual_book').flipBook(options);
+        });
+    </script>
+
+</body>
+</html>
